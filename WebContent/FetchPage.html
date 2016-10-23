@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Main Page</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+	<div id="header">
+		<h1>Database Application</h1>
+	</div>
+
+	<div id="nav">
+		<br> <br> <br>
+		<center>
+			<form action="FetchPage.html">
+				<table align="center">
+					<tr>
+						<td><input type="submit" value="Fetch students"></td>
+					</tr>
+				</table>
+			</form>
+			
+			<form action="Metadata.html">
+				<table align="center">
+					<tr>
+						<td><input type="submit" value="Get metadata"></td>
+					</tr>
+				</table>
+			</form>
+		</center>
+	</div>
+	<div id="section">
+	<center>
+	<br><br>
+	<h1>Enter the details</h1>
+	<br>
+		<form action="FetchServlet" method="POST">
+			<fieldset>
+				<table>
+					<tr>
+						<td>Department name:</td>
+						<td><input type="text" name="dept-name"><br></td>
+					</tr>
+					<tr>
+						<td>Total credits:</td>
+						<td><input type="text" name="total-credits"><br>
+						<br></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td><input type="submit" value="Submit"></td>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+		<center>
+	</div>
+	
+	<div id="footer"><h3>Copyright © praneeth</h3></div>
+</body>
+</html>
