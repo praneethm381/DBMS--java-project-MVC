@@ -1,0 +1,26 @@
+1. Go to page 47 and page 48 to study the schema diagram of the university database.
+
+2. Select a DBMS which you prefer, and create student, department, instructor three relations in the database.(You need to be careful on keys and foreign keys)
+
+3. Use JDBC/ODBC or ADO.NET to create a program which can make a connection to the database, determine and display the schema of each relation in the database.(which means you need to access the meta-data)
+
+4. Create a program which can query on the database. The program have 2 inputs: department and total_credit. The program will use JDBC/ODBC/ADO.NET to connect the database and retrieve all the tuples in student relation whose dept_name and total_cred have the same values with the inputs.
+
+5. You can choose any type of interface. You can use Java Swing, Windows client program, or a Web application.
+	
+6. The due day is April 26 8:00 AM
+
+
+
+create table student(ID varchar(5) primary key, name varchar(20) not null, dept_name varchar(20), tot_cred numeric(3,0));
+create table instructor(ID char(5), name varchar(20) not null, dept_name varchar(20), salary numeric(8,2), primary key (ID));
+create table department(dept_name varchar(20) primary key,building varchar(10),budget numeric(10,2));
+alter table instructor add foreign key (dept_name) references department(dept_name);
+alter table student add foreign key (dept_name) references department(dept_name);
+
+
+actualTable
+https://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html
+
+
+
